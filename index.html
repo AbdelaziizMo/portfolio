@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdelaziz Mostafa — Data Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ░░ NAV ░░ -->
+  <nav id="nav">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>AMA<span class="logo-bracket">]</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">about</a></li>
+      <li><a href="#skills" class="nav-link">skills</a></li>
+      <li><a href="#projects" class="nav-link">projects</a></li>
+      <li><a href="#certifications" class="nav-link">certs</a></li>
+      <li><a href="#contact" class="nav-link">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <section id="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-noise" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">
+        <span class="dot"></span> Open to opportunities · Cairo, EG
+      </p>
+      <h1 class="hero-name reveal-up delay-1">
+        Abdelaziz<br /><em>Mostafa</em>
+      </h1>
+      <p class="hero-title reveal-up delay-2">
+        <span class="typed-text" id="typedText"></span><span class="cursor-blink">_</span>
+      </p>
+      <p class="hero-desc reveal-up delay-3">
+        Building scalable data pipelines, end-to-end warehouses, and automated ETL workflows<br />
+        that turn raw data into analytics-ready intelligence.
+      </p>
+      <div class="hero-cta reveal-up delay-4">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="cv.pdf" download class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal-right delay-2" aria-hidden="true">
+      <div class="orb"></div>
+      <div class="orb orb-2"></div>
+      <div class="hex-ring">
+        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="hex" points="150,10 240,60 240,160 150,210 60,160 60,60" />
+          <polygon class="hex hex-inner" points="150,40 218,78 218,154 150,192 82,154 82,78" />
+          <circle class="hex-dot" cx="150" cy="40" r="4"/>
+          <circle class="hex-dot" cx="218" cy="78" r="4"/>
+          <circle class="hex-dot" cx="218" cy="154" r="4"/>
+          <circle class="hex-dot" cx="150" cy="192" r="4"/>
+          <circle class="hex-dot" cx="82" cy="154" r="4"/>
+          <circle class="hex-dot" cx="82" cy="78" r="4"/>
+          <text x="150" y="125" text-anchor="middle" class="hex-label">DE</text>
+          <text x="150" y="148" text-anchor="middle" class="hex-sublabel">DATA ENG</text>
+        </svg>
+      </div>
+      <div class="stat-pill stat-1">
+        <span class="stat-num">3.31</span>
+        <span class="stat-lbl">GPA</span>
+      </div>
+      <div class="stat-pill stat-2">
+        <span class="stat-num">5+</span>
+        <span class="stat-lbl">Projects Built</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint reveal-up delay-5">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 / about</span>
+        <h2 class="section-title">The Engineer<br /><em>Behind the Data</em></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrap scroll-reveal">
+          <div class="about-image-frame">
+            <div class="about-image-placeholder">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <circle cx="40" cy="28" r="18" stroke="var(--accent)" stroke-width="1.5"/>
+                <path d="M10 72c0-16.57 13.43-30 30-30s30 13.43 30 30" stroke="var(--accent)" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="image-corner tl"></div>
+            <div class="image-corner tr"></div>
+            <div class="image-corner bl"></div>
+            <div class="image-corner br"></div>
+          </div>
+          <div class="about-badge">
+            <span class="badge-num">2026</span>
+            <span class="badge-lbl">Graduating</span>
+          </div>
+        </div>
+        <div class="about-text scroll-reveal delay-1">
+          <p class="about-lead">
+            I'm a Data Engineer who turns raw data into scalable, analytics-ready systems.
+          </p>
+          <p>
+            Currently pursuing my Bachelor's in Computer Science at Cairo Higher Institute (graduating 2026), I specialize in end-to-end Data Warehouses, ETL pipelines, and automated data workflows using Apache Airflow, SQL Server, SSIS, PostgreSQL, and Python.
+          </p>
+          <p>
+            I architect production-focused solutions using Medallion Architecture and Star Schema modeling — making data reliable, structured, and genuinely useful for decision-making.
+          </p>
+          <div class="about-facts">
+            <div class="fact">
+              <span class="fact-key">Location</span>
+              <span class="fact-val">Cairo, Egypt</span>
+            </div>
+            <div class="fact">
+              <span class="fact-key">Focus</span>
+              <span class="fact-val">ETL · DWH · Airflow</span>
+            </div>
+            <div class="fact">
+              <span class="fact-key">Open to</span>
+              <span class="fact-val">Junior Data Roles</span>
+            </div>
+            <div class="fact">
+              <span class="fact-key">Languages</span>
+              <span class="fact-val">Python · SQL · Java</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ SKILLS ░░ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 / skills</span>
+        <h2 class="section-title">Technical<br /><em>Arsenal</em></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card scroll-reveal">
+          <div class="skill-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3>Data Engineering</h3>
+          <ul>
+            <li>Data Warehousing (DWH)</li>
+            <li>ETL Pipeline Design</li>
+            <li>Medallion Architecture</li>
+            <li>Star Schema Modeling</li>
+          </ul>
+          <div class="skill-bar-group">
+            <div class="skill-bar-item">
+              <span>Apache Airflow</span>
+              <div class="bar"><div class="bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>SSIS</span>
+              <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card scroll-reveal delay-1">
+          <div class="skill-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Databases & SQL</h3>
+          <ul>
+            <li>MS SQL Server</li>
+            <li>PostgreSQL</li>
+            <li>Advanced SQL & Querying</li>
+            <li>Data Modeling & Wrangling</li>
+          </ul>
+          <div class="skill-bar-group">
+            <div class="skill-bar-item">
+              <span>SQL</span>
+              <div class="bar"><div class="bar-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>PostgreSQL</span>
+              <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card scroll-reveal delay-2">
+          <div class="skill-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Programming</h3>
+          <ul>
+            <li>Python (Pandas, NumPy)</li>
+            <li>Java & OOP Principles</li>
+            <li>Data Structures & Algorithms</li>
+            <li>Flask Web Framework</li>
+          </ul>
+          <div class="skill-bar-group">
+            <div class="skill-bar-item">
+              <span>Python</span>
+              <div class="bar"><div class="bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>Java</span>
+              <div class="bar"><div class="bar-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card scroll-reveal delay-3">
+          <div class="skill-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Agile Methodology</li>
+            <li>Problem Solving</li>
+            <li>Creative & Innovative Thinking</li>
+            <li>English & Arabic (Bilingual)</li>
+          </ul>
+          <div class="skill-bar-group">
+            <div class="skill-bar-item">
+              <span>Agile</span>
+              <div class="bar"><div class="bar-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>Problem Solving</span>
+              <div class="bar"><div class="bar-fill" data-width="88"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ PROJECTS ░░ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 / projects</span>
+        <h2 class="section-title">Selected<br /><em>Work</em></h2>
+      </div>
+      <div class="projects-list">
+
+        <article class="project-card scroll-reveal" data-num="01">
+          <div class="project-meta">
+            <span class="project-tag">DWH · Medallion · Star Schema</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">SQL Data Warehouse (Medallion Architecture)</h3>
+          <p class="project-desc">
+            Designed and implemented an end-to-end Data Warehouse using the Medallion Architecture (Bronze, Silver, Gold) to transform raw source data into analytics-ready Star Schema views — enabling clean, structured reporting at scale.
+          </p>
+          <div class="project-tech">
+            <span>SQL Server</span><span>SSIS</span><span>Star Schema</span><span>ETL</span><span>Data Modeling</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AbdelaziizMo" target="_blank" class="project-link">GitHub ↗</a>
+          </div>
+          <div class="project-accent"></div>
+        </article>
+
+        <article class="project-card scroll-reveal delay-1" data-num="02">
+          <div class="project-meta">
+            <span class="project-tag">ETL · Airflow · PostgreSQL</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">Automated ETL Data Warehouse Pipeline</h3>
+          <p class="project-desc">
+            Architected an end-to-end automated ETL pipeline using Apache Airflow to ingest and transform real-time user data. Implemented robust error-handling and sensor-based triggers to ensure system availability, resulting in a fully automated ingestion process into a PostgreSQL warehouse.
+          </p>
+          <div class="project-tech">
+            <span>Apache Airflow</span><span>PostgreSQL</span><span>Python</span><span>ETL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AbdelaziizMo" target="_blank" class="project-link">GitHub ↗</a>
+          </div>
+          <div class="project-accent"></div>
+        </article>
+
+        <article class="project-card scroll-reveal delay-2" data-num="03">
+          <div class="project-meta">
+            <span class="project-tag">AI · NLP · Flask · Full-Stack</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">I Love Text — NLP Web Application</h3>
+          <p class="project-desc">
+            Developed a full-stack web application using Flask that integrates Hugging Face AI models for advanced text processing — including content moderation, multilingual translation via M2M100, and text summarization using BART-CNN — with automated text chunking for scalability.
+          </p>
+          <div class="project-tech">
+            <span>Python</span><span>Flask</span><span>HuggingFace</span><span>M2M100</span><span>BART-CNN</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AbdelaziizMo" target="_blank" class="project-link">GitHub ↗</a>
+          </div>
+          <div class="project-accent"></div>
+        </article>
+
+        <article class="project-card scroll-reveal delay-3" data-num="04">
+          <div class="project-meta">
+            <span class="project-tag">Java · OOP · JDBC</span>
+            <span class="project-year">2023</span>
+          </div>
+          <h3 class="project-title">Hospital Management System</h3>
+          <p class="project-desc">
+            Engineered a robust Hospital Management System using Java with core OOP principles to manage patient records, doctor schedules, and billing workflows. Optimized data retrieval with Binary Search algorithms in a modular desktop architecture integrated with JDBC.
+          </p>
+          <div class="project-tech">
+            <span>Java</span><span>OOP</span><span>JDBC</span><span>Data Structures</span><span>Algorithms</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AbdelaziizMo" target="_blank" class="project-link">GitHub ↗</a>
+          </div>
+          <div class="project-accent"></div>
+        </article>
+
+        <article class="project-card scroll-reveal delay-4" data-num="05">
+          <div class="project-meta">
+            <span class="project-tag">Full-Stack · UI/UX · Payments</span>
+            <span class="project-year">2023</span>
+          </div>
+          <h3 class="project-title">Rent Car Platform</h3>
+          <p class="project-desc">
+            Architected an end-to-end Car Rental Platform featuring an intuitive UI/UX for vehicle browsing and booking. Optimized admin processes through automated management and secure payment integration, significantly reducing manual paperwork and transaction time.
+          </p>
+          <div class="project-tech">
+            <span>Java</span><span>OOP</span><span>UI/UX</span><span>Payment Integration</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AbdelaziizMo" target="_blank" class="project-link">GitHub ↗</a>
+          </div>
+          <div class="project-accent"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CERTIFICATIONS ░░ -->
+  <section id="certifications" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 / certifications</span>
+        <h2 class="section-title">Credentials &amp;<br /><em>Recognition</em></h2>
+      </div>
+      <div class="certs-grid">
+
+        <div class="cert-card scroll-reveal">
+          <div class="cert-logo">AST</div>
+          <div class="cert-info">
+            <h4>Astronomer Certification for Apache Airflow 3 Fundamentals</h4>
+            <span class="cert-issuer">Astronomer</span>
+            <span class="cert-date">2024</span>
+          </div>
+          <div class="cert-badge">✓</div>
+        </div>
+
+        <div class="cert-card scroll-reveal delay-1">
+          <div class="cert-logo">KWL</div>
+          <div class="cert-info">
+            <h4>Data Engineering for Beginners: Python, SQL &amp; Airflow</h4>
+            <span class="cert-issuer">Kiwilytics</span>
+            <span class="cert-date">2024</span>
+          </div>
+          <div class="cert-badge">✓</div>
+        </div>
+
+        <div class="cert-card scroll-reveal delay-2">
+          <div class="cert-logo">AI</div>
+          <div class="cert-info">
+            <h4>Creative &amp; Innovative Thinking in the Age of AI</h4>
+            <span class="cert-issuer">Just to Learn</span>
+            <span class="cert-date">2024</span>
+          </div>
+          <div class="cert-badge">✓</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 / contact</span>
+        <h2 class="section-title">Let's Build<br /><em>Something Real</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left scroll-reveal">
+          <p class="contact-lead">
+            Open to junior Data Engineering roles, internships, and data-focused collaborations. Let's connect.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:abdelazizmostafa261@gmail.com" class="contact-item">
+              <span class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+              </span>
+              <span>abdelazizmostafa261@gmail.com</span>
+            </a>
+            <a href="tel:01550054980" class="contact-item">
+              <span class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span>01550054980</span>
+            </a>
+            <a href="https://linkedin.com/in/abdelaziiz-mo" target="_blank" class="contact-item">
+              <span class="contact-icon">in</span>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="https://github.com/AbdelaziizMo" target="_blank" class="contact-item">
+              <span class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </span>
+              <span>github.com/AbdelaziizMo</span>
+            </a>
+          </div>
+          <a href="cv.pdf" download class="btn btn-primary cv-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Full CV
+          </a>
+        </div>
+        <div class="contact-form-wrap scroll-reveal delay-1">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message →</button>
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-logo"><span class="logo-bracket">[</span>AMA<span class="logo-bracket">]</span></span>
+      <span class="footer-copy">© 2025 Abdelaziz Mostafa Ahmed · Data Engineer · Cairo, EG</span>
+      <a href="#hero" class="back-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
