@@ -20,9 +20,18 @@
     <div class="nav-logo">
       <span class="logo-bracket">[</span>AMA<span class="logo-bracket">]</span>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+
+    <!-- Integration: Theme Toggle + Menu Button -->
+    <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+            <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+    </div>
+
     <ul class="nav-links" id="navLinks">
       <li><a href="#about" class="nav-link">about</a></li>
       <li><a href="#skills" class="nav-link">skills</a></li>
@@ -103,12 +112,9 @@
       <div class="about-grid">
         <div class="about-image-wrap scroll-reveal">
           <div class="about-image-frame">
-            <div class="about-image-placeholder">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                <circle cx="40" cy="28" r="18" stroke="var(--accent)" stroke-width="1.5"/>
-                <path d="M10 72c0-16.57 13.43-30 30-30s30 13.43 30 30" stroke="var(--accent)" stroke-width="1.5"/>
-              </svg>
-            </div>
+            <!-- Modification: Add your photo here -->
+            <img src="img1.jpeg" alt="Abdelaziz Mostafa" class="about-image" loading="lazy"/>
+            <!-- End photo -->
             <div class="image-corner tl"></div>
             <div class="image-corner tr"></div>
             <div class="image-corner bl"></div>
@@ -351,7 +357,7 @@
             <span>Java</span><span>OOP</span><span>UI/UX</span><span>Payment Integration</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/AbdelaziizMo" target="_blank" class="project-link">GitHub ↗</a>
+          <a href="https://github.com/AbdelaziizMo" target="_blank" class="project-link">GitHub ↗</a>
           </div>
           <div class="project-accent"></div>
         </article>

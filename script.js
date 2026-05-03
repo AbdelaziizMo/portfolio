@@ -1,5 +1,5 @@
 /* =========================================
-   ALEX MERCER — AI ENGINEER PORTFOLIO
+   ABDELAZIZ MOSTAFA — DATA ENGINEER PORTFOLIO
    script.js
    ========================================= */
 
@@ -275,9 +275,35 @@
   });
 })();
 
+/* ── LIGHT/DARK MODE TOGGLE ── */
+(function initTheme() {
+    const toggle = document.getElementById('themeToggle');
+    if (!toggle) return;
+
+    // Check localStorage or system preference
+    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+    if (currentTheme === 'light') {
+        document.body.classList.add('light-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        const theme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+        localStorage.setItem('theme', theme);
+        
+        // Minor design tweak for "Deep Space" visual
+        const orbs = document.querySelectorAll('.orb');
+        orbs.forEach(orb => {
+            orb.style.animation = 'none';
+            orb.offsetHeight; // trigger reflow
+            orb.style.animation = ''; // restart animation
+        });
+    });
+})();
 
 /* ── ACTIVE NAV LINK STYLE ── */
 const navStyle = document.createElement('style');
-navStyle.textContent = `.nav-link.active { color: var(--accent); }
+navStyle.textContent = `.nav-link.active { color: var(--accent-hc); }
 .nav-link.active::after { width: 100%; }`;
 document.head.appendChild(navStyle);
