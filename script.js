@@ -1,5 +1,5 @@
 /* =========================================
-   ABDELAZIZ MOSTAFA — DATA ENGINEER PORTFOLIO
+   ALEX MERCER — AI ENGINEER PORTFOLIO
    script.js
    ========================================= */
 
@@ -275,35 +275,48 @@
   });
 })();
 
-/* ── LIGHT/DARK MODE TOGGLE ── */
-(function initTheme() {
-    const toggle = document.getElementById('themeToggle');
-    if (!toggle) return;
-
-    // Check localStorage or system preference
-    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-
-    if (currentTheme === 'light') {
-        document.body.classList.add('light-mode');
-    }
-
-    toggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        const theme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
-        localStorage.setItem('theme', theme);
-        
-        // Minor design tweak for "Deep Space" visual
-        const orbs = document.querySelectorAll('.orb');
-        orbs.forEach(orb => {
-            orb.style.animation = 'none';
-            orb.offsetHeight; // trigger reflow
-            orb.style.animation = ''; // restart animation
-        });
-    });
-})();
 
 /* ── ACTIVE NAV LINK STYLE ── */
 const navStyle = document.createElement('style');
-navStyle.textContent = `.nav-link.active { color: var(--accent-hc); }
+navStyle.textContent = `.nav-link.active { color: var(--accent); }
 .nav-link.active::after { width: 100%; }`;
 document.head.appendChild(navStyle);
+
+
+/* ── THEME TOGGLE ── */
+(function initTheme() {
+  const btn  = document.getElementById('themeToggle');
+  const root = document.documentElement;
+
+  // Restore saved preference
+  const saved = localStorage.getItem('theme');
+  if (saved === 'light') root.setAttribute('data-theme', 'light');
+
+  btn?.addEventListener('click', () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+})();
+
+
+/* ── FIX: cursor-trail z-index vs nav ── */
+/* The cursor trail sits at z-index 9999 globally which can
+   visually overlap nav items. We cap pointer-events: none
+   already, but we also ensure the trail shrinks when over nav */
+(function fixCursorNav() {
+  const trail = document.getElementById('cursorTrail');
+  const nav   = document.getElementById('nav');
+  if (!trail || !nav) return;
+
+  document.addEventListener('mousemove', e => {
+    const navRect = nav.getBoundingClientRect();
+    const overNav = e.clientY <= navRect.bottom;
+    trail.style.opacity = overNav ? '0' : '1';
+  });
+})();
